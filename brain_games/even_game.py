@@ -1,7 +1,7 @@
 from random import randint
 from brain_games.greeting import welcome_user
 
-
+# Приветствие
 name = welcome_user()
 
 
@@ -20,7 +20,9 @@ def even():
     count = 0  # счетчик ответов
     # основной цикл игры
     for _ in range(3):
+
         rand_x = randint(1, 999)  # новое число для пользователя
+
         print('Question:', rand_x)
 
         answer = input('Your answer: ')  # получаем ответ пользователя
