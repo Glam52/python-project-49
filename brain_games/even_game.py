@@ -4,11 +4,11 @@ import prompt
 
 
 # Функция проверки на четность
-def is_even(n: int) -> bool:
+def is_even(n: int) -> str:
     if n % 2 == 0:
-        return True
+        return 'yes'
     else:
-        return False
+        return 'no'
 
 
 def even():
@@ -16,31 +16,20 @@ def even():
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     count = 0  # счетчик ответов
-
     # основной цикл игры
     for _ in range(3):
         rand_x = randint(1, 999)  # новое число для пользователя
         print('Question:', rand_x)
 
         answer = input('Your answer: ')  # получаем ответ пользователя
-        if answer == 'yes':
-            x = True
-        elif answer == 'no':
-            x = False
-        else:
-            print(f"{answer} is wrong answer ;(. Correct answer was..")
-            break
 
         # сравниваем ответ и функцию-проверку
-        if is_even(rand_x) != x:
-            if x == True:
-                print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\n"
-                      f"Let's try again")
-            elif x == False:
-                print(f"'no' is wrong answer ;(. Correct answer was 'yes'.\n"
-                      f"Let's try again")
+        if answer != is_even(rand_x):
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{is_even(rand_x)}'\n"
+                  f"Let's try again")
             break
-        elif is_even(rand_x) == x:
+        else:
             print('Correct!')
             count += 1
 
