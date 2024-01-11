@@ -1,5 +1,8 @@
 from random import randint
+from brain_games.greeting import welcome_user
 
+
+name = welcome_user()
 
 # Функция проверки на четность
 def is_even(n: int) -> str:
@@ -25,11 +28,13 @@ def even():
         if answer != is_even(rand_x):
             print(f"'{answer}' is wrong answer ;(. "
                   f"Correct answer was '{is_even(rand_x)}'\n"
-                  f"Let's try again")
+                  f"Let's try again, {name}")
             break
         else:
             print('Correct!')
             count += 1
 
     if count == 3:
-        print('Congratulations')
+        print(f'Congratulations, {name}')
+
+even()
