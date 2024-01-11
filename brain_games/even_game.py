@@ -1,7 +1,5 @@
 from random import randint
 
-import prompt
-
 
 # Функция проверки на четность
 def is_even(n: int) -> str:
@@ -35,8 +33,3 @@ def even():
 
     if count == 3:
         print('Congratulations')
-
-
-even()
-
-

@@ -1,5 +1,8 @@
 from brain_games.greeting import welcome_user
+from brain_games.even_game import even
 
-# Приветствуем игрока, спрашиваем его имя
+# Приветсвие
 welcome_user()
 
+# Сама игра
+even()
