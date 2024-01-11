@@ -4,6 +4,7 @@ from brain_games.greeting import welcome_user
 
 name = welcome_user()
 
+
 # Функция проверки на четность
 def is_even(n: int) -> str:
     if n % 2 == 0:

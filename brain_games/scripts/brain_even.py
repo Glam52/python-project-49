@@ -1,3 +1,6 @@
 from brain_games.even_game import even
+
+
 # запуск игры
-even()
+def main():
+    even()
