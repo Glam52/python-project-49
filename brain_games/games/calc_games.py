@@ -40,4 +40,4 @@ def game_calc():
     if count == 3:
         print(f'Congratulations, {name}')
 
-game_calc()
+
