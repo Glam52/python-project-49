@@ -26,16 +26,16 @@ def game_calc():
 
         print('Question:', rand_a, rand_oper, rand_b)
 
-        answer = int(input('Your answer: '))
+        user_answer = int(input('Your answer: '))
+        correct_answer = calc(rand_a, rand_b, rand_oper)
 
-        if answer != calc(rand_a, rand_b, rand_oper):
-            print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{calc(rand_a, rand_b, rand_oper)}'\n"
+        if user_answer != correct_answer:
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'\n"
                   f"Let's try again, {name}")
             break
         else:
             print('Correct!')
-            count += 1
 
     if count == 3:
         print(f'Congratulations, {name}')
