@@ -1,42 +1,22 @@
 from random import randint, choice
+from brain_games.Core import game_core
 
-name = welcome_user()
+# The basic logic of the game
+def game_generator():
+    operator = ['+', '-', '*']
+    question = [randint(1, 99), choice(operator), randint(1, 99)]
+    if question[1] == '+':
+        answer = question[0] + question[2]
+    elif question[1] == '-':
+        answer = question[0] - question[2]
+    elif question[1] == '*':
+        answer = question[0] * question[2]
+
+    question = ' '.join(str(x) for x in question)
+    return question, answer
 
 
-# логика калькулятора
-def calc(first_dig: int, last_dig: int, operator: str) -> int:
-    if operator == '+':
-        return first_dig + last_dig
-    elif operator == '-':
-        return first_dig - last_dig
-    elif operator == '*':
-        return first_dig * last_dig
+description = 'What is the result of the expression?'
 
-
-def game_calc():
-    print('What is the result of the expression?')
-
-    count = 0
-    for _ in range(3):
-
-        rand_a = randint(1, 99)
-        rand_b = randint(1, 99)
-        rand_oper = choice(['+', '-', '*'])
-
-        print('Question:', rand_a, rand_oper, rand_b)
-
-        user_answer = int(input('Your answer: '))
-        correct_answer = calc(rand_a, rand_b, rand_oper)
-
-        if user_answer != correct_answer:
-            print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'\n"
-                  f"Let's try again, {name}")
-            break
-        else:
-            print('Correct!')
-
-    if count == 3:
-        print(f'Congratulations, {name}')
-
+game_core(game_generator, description)
 
