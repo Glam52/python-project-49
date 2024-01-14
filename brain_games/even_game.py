@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.greeting import welcome_user
+from Core import welcome_user
 
 # Приветствие
 name = welcome_user()

@@ -1,5 +1,4 @@
 from random import randint, choice
-from brain_games.greeting import welcome_user
 
 name = welcome_user()
 
