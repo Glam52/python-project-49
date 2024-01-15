@@ -1,12 +1,12 @@
-def game_core(game_generator: object,
+def game_core(game_generator: tuple,
               description: str
-              ) -> object:
+              ) -> str:
 
     '''
     This function is the main engine of the game,
     only the logic of the generator changes
     :param game_generator: A tuple generating a question and answer
-    "param description: It is a description of the game to the user
+    :param description: It is a description of the game to the user
     '''
 
     # General greeting in the game

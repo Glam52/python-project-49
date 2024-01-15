@@ -17,6 +17,12 @@ def game_generator() -> tuple:
     return question, answer
 
 
+'''
+This function generates 2 numbers and searches for their greatest common divisor
+:var question: a string of two numbers
+:var answer: a string of one number, the result of the calculation
+'''
+
 description = 'Find the greatest common divisor of given numbers.'
 
 game_core(game_generator, description)
