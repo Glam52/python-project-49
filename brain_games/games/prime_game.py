@@ -22,8 +22,10 @@ def game_generator() -> tuple:
 
     return question, answer
 
+
 '''
-This function takes a random number and uses a formula to determine whether it is simple
+This function takes a random number and uses a formula
+to determine whether it is simple
 :var question: return the number with which the action will be performed
 :var answer: whether the number is prime or not
 '''
