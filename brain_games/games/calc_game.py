@@ -1,5 +1,5 @@
 from random import randint, choice
-from brain_games.Core import game_core
+from brain_games.core import game_core
 
 
 # The basic logic of the game
