@@ -1,6 +1,7 @@
 def game_core(game_generator: object,
               description: str
               ) -> object:
+
     '''
     This function is the main engine of the game,
     only the logic of the generator changes

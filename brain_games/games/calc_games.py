@@ -3,7 +3,7 @@ from brain_games.Core import game_core
 
 
 # The basic logic of the game
-def game_generator():
+def game_generator() -> tuple:
     operator = ['+', '-', '*']
     question = [randint(1, 99), choice(operator), randint(1, 99)]
     if question[1] == '+':
