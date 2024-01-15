@@ -1,6 +1,7 @@
 from random import randint
 from brain_games.Core import game_core
 
+
 def game_generator():
     question = [randint(1, 99)]
     if question[0] % 2 == 0:
@@ -17,4 +18,3 @@ def game_generator():
 description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 game_core(game_generator, description)
-

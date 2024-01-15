@@ -1,6 +1,7 @@
 from random import randint, choice
 from brain_games.Core import game_core
 
+
 # The basic logic of the game
 def game_generator():
     operator = ['+', '-', '*']
@@ -19,4 +20,3 @@ def game_generator():
 description = 'What is the result of the expression?'
 
 game_core(game_generator, description)
-

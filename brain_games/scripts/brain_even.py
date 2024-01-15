@@ -1,6 +1,6 @@
-from brain_games.even_game import even
+from brain_games.games.even_game import game_generator
 
 
 # запуск игры
 def main():
-    even()
+    game_generator()
