@@ -10,7 +10,7 @@ def game_generator() -> tuple:
 
     for i in range(10):
         if i == empty_step:
-            question.append('...')
+            question.append('..')
             start_progress += step_progress
             answer = start_progress + step_progress
         else:
