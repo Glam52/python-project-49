@@ -23,7 +23,7 @@ def game_generator() -> tuple:
 
 
 '''
-This function creates a progression of random numbers, 
+This function creates a progression of random numbers,
 creates a gap in one of the numbers and remembers the missing number
 :var question: List of number progression with gap
 :var answer: the missing number
