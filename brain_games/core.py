@@ -40,4 +40,4 @@ def game_core(game_generator: tuple,
             count += 1
 
     if count == 3:
-        print(f"Congratulations, {name}")
+        print(f"Congratulations, {name}!")
