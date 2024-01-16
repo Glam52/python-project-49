@@ -32,7 +32,7 @@ def game_core(game_generator: tuple,
         if str(corect_answer) != str(user_answer):
             print(f'{user_answer} is wrong answer ;(. '
                   f'Correct answer was {corect_answer} \n'
-                  f"Let's try again, {name}")
+                  f"Let's try again, {name}!")
             break
 
         else:
