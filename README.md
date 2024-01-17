@@ -3,7 +3,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/d60bce503c87d30cc9b5/maintainability)](https://codeclimate.com/github/Glam52/python-project-49/maintainability)
 
-This project is a collection of small math games
+This project is a collection of small math games 
 
 Examples:
 
