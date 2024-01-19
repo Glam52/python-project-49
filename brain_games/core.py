@@ -1,6 +1,7 @@
+import prompt
 def game_core(game_generator: tuple,
               description: str
-              ) -> str:
+              ):
 
     '''
     This function is the main engine of the game,
@@ -10,12 +11,7 @@ def game_core(game_generator: tuple,
     '''
 
     # General greeting in the game
-    print('Welcome to the Brain Games!')
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print(f'Hello, {name}')
+    name = prompt.string('May I have your name? ')
 
     # Description of the game
     print(description)
