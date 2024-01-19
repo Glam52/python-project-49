@@ -1,19 +1,22 @@
 from random import randint, choice
 from brain_games.core import game_core
+from typing import Tuple
 
 
 # The basic logic of the game
-def game_generator() -> tuple:
-    operator = ['+', '-', '*']
-    question = [randint(1, 99), choice(operator), randint(1, 99)]
-    if question[1] == '+':
-        answer = question[0] + question[2]
-    elif question[1] == '-':
-        answer = question[0] - question[2]
-    elif question[1] == '*':
-        answer = question[0] * question[2]
+def game_generator() -> Tuple[str, str]:
+    operator = choice(['+', '-', '*'])
+    first_dig = randint(1, 99)
+    last_dig = randint(1, 99)
 
-    question = ' '.join(str(x) for x in question)
+    if operator == '+':
+        answer = str(first_dig + last_dig)
+    elif operator == '-':
+        answer = str(first_dig - last_dig)
+    elif operator == '*':
+        answer = str(first_dig * last_dig)
+
+    question = f'{first_dig} {operator} {last_dig}'
     return question, answer
 
 
