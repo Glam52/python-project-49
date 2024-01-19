@@ -1,18 +1,16 @@
 from random import randint
 from brain_games.core import game_core
+from typing import Tuple
 
 
-def game_generator() -> tuple:
-    question = [randint(1, 99)]
-    if question[0] % 2 == 0:
-        answer = ['yes']
+def game_generator() -> Tuple[str, str]:
+    question = randint(1, 99)
+    if question % 2 == 0:
+        answer = 'yes'
     else:
-        answer = ['no']
+        answer = 'no'
 
-    question = " ".join(str(x) for x in question)
-    answer = " ".join(str(x) for x in answer)
-
-    return question, answer
+    return str(question), answer
 
 
 '''
