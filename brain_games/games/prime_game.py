@@ -1,9 +1,10 @@
 from random import randint
 import math
 from brain_games.core import game_core
+from typing import Tuple
 
 
-def game_generator() -> tuple:
+def game_generator() -> Tuple[str, str]:
     question = randint(1, 101)
     is_prime = True
 
@@ -20,7 +21,7 @@ def game_generator() -> tuple:
     else:
         answer = 'no'
 
-    return question, answer
+    return str(question), answer
 
 
 '''
