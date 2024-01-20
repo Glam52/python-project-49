@@ -1,6 +1,6 @@
 from random import randint
 from brain_games.core import game_core
-from typing import Tuple, List
+from typing import Tuple, List, Callable
 
 
 def game_generator() -> Tuple[List[int], str]:
@@ -16,7 +16,9 @@ def game_generator() -> Tuple[List[int], str]:
     step_progress = randint(1, 5)
     empty_step = randint(0, 9)
 
-    progression = list(map(lambda i: start_progress + i * step_progress, range(10)))
+    progression = list(map(lambda i: start_progress + i * step_progress,
+                           range(10))
+                       )
 
     progression[empty_step], answer = '..', str(progression[empty_step])
 
@@ -26,3 +28,11 @@ def game_generator() -> Tuple[List[int], str]:
 DESCRIPTION: str = 'What number is missing in the progression?'
 
 game_core(game_generator, DESCRIPTION)
+
+
+def play() -> Callable:
+    """
+    this function helps to run the game from the script
+    """
+
+    game_core(game_generator, DESCRIPTION)

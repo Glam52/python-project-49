@@ -1,7 +1,7 @@
 from random import randint
 import math
 from brain_games.core import game_core
-from typing import Tuple
+from typing import Tuple, Callable
 
 
 def game_generator() -> Tuple[str, str]:
@@ -32,6 +32,15 @@ def game_generator() -> Tuple[str, str]:
     return str(question), answer
 
 
-DESCRIPTION: str = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DESCRIPTION: str = 'Answer "yes" if given number is prime. ' \
+                   'Otherwise answer "no".'
 
 game_core(game_generator, DESCRIPTION)
+
+
+def play() -> Callable:
+    """
+    this function helps to run the game from the script
+    """
+
+    game_core(game_generator, DESCRIPTION)

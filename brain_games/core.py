@@ -4,7 +4,7 @@ from typing import Callable
 
 def game_core(game_generator: Callable,
               description: str
-              ):
+              ) -> object:
 
     """
     This function is the main engine of the game,
@@ -40,3 +40,6 @@ def game_core(game_generator: Callable,
 
     if count == 3:
         print(f"Congratulations, {name}!")
+
+
+

@@ -1,10 +1,9 @@
 from random import randint
 from brain_games.core import game_core
-from typing import Tuple
+from typing import Tuple, Callable
 
 
 def game_generator() -> Tuple[str, str]:
-
     """
     This function generates a random number and checks if it is even
     @rtype: Tuple
@@ -23,3 +22,11 @@ def game_generator() -> Tuple[str, str]:
 DESCRIPTION: str = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 game_core(game_generator, DESCRIPTION)
+
+
+def play() -> Callable:
+    """
+    this function helps to run the game from the script
+    """
+
+    game_core(game_generator, DESCRIPTION)
