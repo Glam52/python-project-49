@@ -27,12 +27,15 @@ def game_generator() -> Tuple[List[int], str]:
 
 DESCRIPTION: str = 'What number is missing in the progression?'
 
-game_core(game_generator, DESCRIPTION)
-
-
+# Работа ядра с логикой игры
 def play() -> Callable:
+
     """
     this function helps to run the game from the script
     """
 
     game_core(game_generator, DESCRIPTION)
+
+
+# Запуск игры
+play()

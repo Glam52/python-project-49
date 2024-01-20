@@ -31,13 +31,14 @@ def game_generator() -> Tuple[str, str]:
 DESCRIPTION: str = 'What is the result of the expression?'
 
 # Работа ядра с логикой игры
-game_core(game_generator, DESCRIPTION)
-
-
-# запуск игры для scripts
 def play() -> Callable:
+
     """
     this function helps to run the game from the script
     """
 
     game_core(game_generator, DESCRIPTION)
+
+
+# Запуск игры
+play()
