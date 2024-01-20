@@ -40,4 +40,4 @@ def game_core(game_generator: Callable,
             count += 1
 
     if count == 3:
-        print(f"Congratulations, {name}!")
+        return print(f"Congratulations, {name}!")
