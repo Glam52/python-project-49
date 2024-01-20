@@ -1,14 +1,17 @@
 import prompt
-def game_core(game_generator: tuple,
+from typing import Callable
+
+
+def game_core(game_generator: Callable,
               description: str
               ):
 
-    '''
+    """
     This function is the main engine of the game,
     only the logic of the generator changes
-    :param game_generator: A tuple generating a question and answer
-    :param description: It is a description of the game to the user
-    '''
+    @param: A Callable generating a question and answer
+    @param: description: It is a description of the game to the user
+    """
 
     # General greeting in the game
     name = prompt.string('May I have your name? ')

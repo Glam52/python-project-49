@@ -5,6 +5,14 @@ from typing import Tuple
 
 
 def game_generator() -> Tuple[str, str]:
+
+    """
+    This function takes a random number and uses a formula
+    to determine whether it is simple
+    @rtype: Tuple
+    @return: question for the user and a ready answer for comparison
+    """
+
     question = randint(1, 101)
     is_prime = True
 
@@ -24,13 +32,6 @@ def game_generator() -> Tuple[str, str]:
     return str(question), answer
 
 
-'''
-This function takes a random number and uses a formula
-to determine whether it is simple
-:var question: return the one number with which the action will be performed
-:var answer: return string whether the number is prime or not
-'''
+DESCRIPTION: str = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-
-game_core(game_generator, description)
+game_core(game_generator, DESCRIPTION)

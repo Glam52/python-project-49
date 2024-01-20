@@ -5,6 +5,14 @@ from typing import Tuple
 
 # The basic logic of the game
 def game_generator() -> Tuple[str, str]:
+
+    """
+    This function generates a random mathematical operation
+    and returns the answer to it
+    @rtype: Tuple
+    @return: question for the user and a ready answer for comparison
+    """
+
     operator = choice(['+', '-', '*'])
     first_dig = randint(1, 99)
     last_dig = randint(1, 99)
@@ -20,13 +28,6 @@ def game_generator() -> Tuple[str, str]:
     return question, answer
 
 
-'''
-This function generates a random expression and returns its answer
-:var question: a random expression, a string with 2 numbers and an operator
-:var answer: a string with an answer number
-'''
+DESCRIPTION: str = 'What is the result of the expression?'
 
-
-description = 'What is the result of the expression?'
-
-game_core(game_generator, description)
+game_core(game_generator, DESCRIPTION)

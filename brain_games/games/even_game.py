@@ -4,6 +4,13 @@ from typing import Tuple
 
 
 def game_generator() -> Tuple[str, str]:
+
+    """
+    This function generates a random number and checks if it is even
+    @rtype: Tuple
+    @return: question for the user and a ready answer for comparison
+    """
+
     question = randint(1, 99)
     if question % 2 == 0:
         answer = 'yes'
@@ -13,13 +20,6 @@ def game_generator() -> Tuple[str, str]:
     return str(question), answer
 
 
-'''
-This function generates a random number and returns its even or odd
-:var question: return string of one random number
-:var answer: return string whether the number even or not.
-'''
+DESCRIPTION: str = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-
-description = 'Answer "yes" if the number is even, otherwise answer "no".'
-
-game_core(game_generator, description)
+game_core(game_generator, DESCRIPTION)

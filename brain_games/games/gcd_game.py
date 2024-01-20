@@ -4,9 +4,17 @@ from typing import Tuple
 
 
 def game_generator() -> Tuple[str, str]:
+
+    """
+    This function generates 2 numbers and searches
+    for their greatest common divisor
+    @rtype: Tuple
+    @return: question for the user and a ready answer for comparison
+    """
+
     a = randint(1, 99)
     b = randint(1, 99)
-    b_quest = b # для помещения в генератор вопроса
+    b_quest = b  # для помещения в генератор вопроса
 
     # finding the gcd
     while b:
@@ -18,12 +26,6 @@ def game_generator() -> Tuple[str, str]:
     return question, answer
 
 
-'''
-This function generates 2 numbers and searches for their greatest common divisor
-:var question: a string of two numbers
-:var answer: a string of one number, the result of the calculation
-'''
+DESCRIPTION: str = 'Find the greatest common divisor of given numbers.'
 
-description = 'Find the greatest common divisor of given numbers.'
-
-game_core(game_generator, description)
+game_core(game_generator, DESCRIPTION)
