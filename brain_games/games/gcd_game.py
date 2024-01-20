@@ -36,7 +36,3 @@ def play() -> Callable:
     """
 
     game_core(game_generator, DESCRIPTION)
-
-
-# Запуск игры
-play()

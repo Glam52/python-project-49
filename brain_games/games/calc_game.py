@@ -41,4 +41,4 @@ def play() -> Callable:
 
 
 # Запуск игры
-play()
+#play()
