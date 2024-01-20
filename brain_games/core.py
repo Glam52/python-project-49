@@ -4,7 +4,7 @@ from typing import Callable
 
 def game_core(game_generator: Callable,
               description: str
-              ) -> object:
+              ):
 
     """
     This function is the main engine of the game,
@@ -17,7 +17,8 @@ def game_core(game_generator: Callable,
     name = prompt.string('May I have your name? ')
 
     # Description of the game
-    print(description)
+    print(f"Hello, {name} \n "
+          f"{description}")
 
     # Question/answer loop
     count = 0
@@ -29,8 +30,8 @@ def game_core(game_generator: Callable,
         user_answer = input('Your answer: ').lower()
 
         if str(corect_answer) != str(user_answer):
-            print(f'{user_answer} is wrong answer ;(. '
-                  f'Correct answer was {corect_answer} \n'
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{corect_answer}' \n"
                   f"Let's try again, {name}!")
             break
 
