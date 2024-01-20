@@ -30,6 +30,7 @@ DESCRIPTION: str = 'Find the greatest common divisor of given numbers.'
 
 game_core(game_generator, DESCRIPTION)
 
+
 def play() -> Callable:
     """
     this function helps to run the game from the script
