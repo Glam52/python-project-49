@@ -2,24 +2,16 @@ from random import randint
 from brain_games.core import game_core
 
 
-def game_generator() -> tuple:
-    question = []
+def game_generator():
     start_progress = randint(1, 50)
     step_progress = randint(1, 5)
     empty_step = randint(0, 9)
 
-    for i in range(10):
-        if i == empty_step:
-            question.append('..')
-            start_progress += step_progress
-            answer = start_progress + step_progress
-        else:
-            start_progress += step_progress
-            question.append(start_progress + step_progress)
+    progression = list(map(lambda i: start_progress + i * step_progress, range(10)))
 
-    question = ' '.join(str(x) for x in question)
+    progression[empty_step], answer = '..', str(progression[empty_step])
 
-    return question, answer
+    return progression, answer
 
 
 '''
