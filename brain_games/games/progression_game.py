@@ -16,13 +16,14 @@ def game_generator() -> Tuple[List[int], str]:
     step_progress = randint(1, 5)
     empty_step = randint(0, 9)
 
-    progression = list(map(lambda i: start_progress + i * step_progress,
+    progression = list(map(lambda i: str(start_progress + i * step_progress),
                            range(10))
                        )
 
-    progression[empty_step], answer = '..', str(progression[empty_step])
+    progression[empty_step], answer = "..", str(progression[empty_step])
+    result = ' '.join(progression)
 
-    return progression, answer
+    return result, answer
 
 
 DESCRIPTION: str = 'What number is missing in the progression?'
