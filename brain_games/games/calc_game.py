@@ -1,6 +1,5 @@
 from random import randint, choice
-from brain_games.core import game_core
-from typing import Tuple, Callable
+from typing import Tuple
 
 
 # The basic logic of the game

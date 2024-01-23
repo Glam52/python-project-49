@@ -8,4 +8,5 @@ def main():
     welcome_user()
 
 
-if __name__ == 'main': main()
+if __name__ == 'main':
+    main()

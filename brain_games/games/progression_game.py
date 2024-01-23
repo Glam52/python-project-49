@@ -1,6 +1,5 @@
 from random import randint
-from brain_games.core import game_core
-from typing import Tuple, List, Callable
+from typing import Tuple, List
 
 
 def game_generator() -> Tuple[List[int], str]:
