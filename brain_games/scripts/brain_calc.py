@@ -2,8 +2,5 @@ from brain_games.games.calc_game import play
 
 
 # The script that starts the game
-def main():
+if __name__ == '__play__':
     play()
-
-
-if __name__ == 'main': main()
