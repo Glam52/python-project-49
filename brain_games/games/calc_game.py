@@ -1,5 +1,6 @@
 from random import randint, choice
 from typing import Tuple
+from brain_games.launcher import launch_game
 
 
 # The basic logic of the game
@@ -28,3 +29,11 @@ def game_generator() -> Tuple[str, str]:
 
 
 DESCRIPTION: str = 'What is the result of the expression?'
+
+
+def play():
+    """
+    This function is responsible for launching
+    the game from the script
+    """
+    launch_game(game_generator, DESCRIPTION)

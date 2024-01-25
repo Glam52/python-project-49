@@ -1,8 +1,9 @@
 from random import randint
 from typing import Tuple, List
+from brain_games.launcher import launch_game
 
 
-def game_generator() -> Tuple[List[int], str]:
+def game_generator() -> Tuple[List[str], str]:
 
     """
     This function creates a progression of random numbers,
@@ -20,9 +21,17 @@ def game_generator() -> Tuple[List[int], str]:
                        )
 
     progression[empty_step], answer = "..", str(progression[empty_step])
-    result = ' '.join(progression)
+    question = ' '.join(progression)
 
-    return result, answer
+    return question, answer
 
 
 DESCRIPTION: str = 'What number is missing in the progression?'
+
+
+def play():
+    """
+    This function is responsible for launching
+    the game from the script
+    """
+    launch_game(game_generator, DESCRIPTION)

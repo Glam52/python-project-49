@@ -1,8 +1,8 @@
 import prompt
-from typing import Callable
+from typing import Callable, Tuple
 
 
-def game_core(game_generator: Callable,
+def game_core(game_generator: Callable[[], Tuple[str, str]],
               description: str
               ):
 
@@ -27,7 +27,7 @@ def game_core(game_generator: Callable,
 
         print(f'Question: {question}')
 
-        user_answer = input('Your answer: ').lower()
+        user_answer = prompt.string('Your answer: ').lower()
 
         if str(corect_answer) != str(user_answer):
             print(f"'{user_answer}' is wrong answer ;(. "

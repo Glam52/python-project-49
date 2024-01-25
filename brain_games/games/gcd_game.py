@@ -1,5 +1,6 @@
 from random import randint
 from typing import Tuple
+from brain_games.launcher import launch_game
 
 
 def game_generator() -> Tuple[str, str]:
@@ -26,3 +27,11 @@ def game_generator() -> Tuple[str, str]:
 
 
 DESCRIPTION: str = 'Find the greatest common divisor of given numbers.'
+
+
+def play():
+    """
+    This function is responsible for launching
+    the game from the script
+    """
+    launch_game(game_generator, DESCRIPTION)
