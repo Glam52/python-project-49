@@ -13,16 +13,13 @@ def game_generator() -> Tuple[str, str]:
     @return: question for the user and a ready answer for comparison
     """
 
-    question = randint(1, 101)
+    question = randint(2, 101)
     is_prime = True
 
-    if question <= 1:
-        answer = 'no'
-    else:
-        for i in range(2, math.isqrt(question) + 1):
-            if question % i == 0:
-                is_prime = False
-                break
+    for i in range(2, math.isqrt(question) + 1):
+        if question % i == 0:
+            is_prime = False
+            break
 
     if is_prime:
         answer = 'yes'
